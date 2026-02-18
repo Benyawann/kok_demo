@@ -92,7 +92,7 @@
             <tbody>
                 {% for row in water_data.pivot_list %}
                 <tr>
-                    <td style="font-weight: 600; background: #f8f9fa;">{{ row.parameter }}</td>
+                    <td style="font-weight: 600; background: #f8f9fa;">{{ row.parameter }}  ({{ row.unit }})</td>
                     {% for check_num in water_data.check_numbers %}
                         {% set check_str = check_num|string %}
                         {% set val = row.check_values.get(check_str, '') %}
